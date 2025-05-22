@@ -2,11 +2,32 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Моє резюме</title>
 </head>
 <body>
+<div id="resume">
+    <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+        <div id="modalContent">
+            <h2>Зворотній зв’язок</h2>
+            <form id="feedbackForm" action="https://formspree.io/f/mzzrqaoy" method="POST">
+                <label>Ім'я:<br><input type="text" name="name" required></label><br><br>
+                <label>Email:<br><input type="email" name="email" required></label><br><br>
+                <label>Телефон:<br><input type="tel" name="phone"></label><br><br>
+                <label>Повідомлення:<br><textarea name="message" rows="4" required></textarea></label><br><br>
+                <button type="submit">Відправити</button>
+                <button type="button" id="closeModal">Закрити</button>
+            </form>
+        </div>
+    </div>
 
-<h1>Іванчук Тимур</h1>
+    <label style="position:fixed; top:10px; right:10px; cursor:pointer; user-select:none;">
+        <input type="checkbox" id="toggleTheme" style="display:none;">
+        <span id="toggleLabel" style="padding:5px 10px; background:#ddd; border-radius:5px;">Денна тема</span>
+    </label>
+
+    <h1>Іванчук Тимур</h1>
 
 <h2>Контакти</h2>
 <p><strong>Email:</strong> nomercyklein@gmail.com</p>
@@ -52,6 +73,9 @@
     <li>Англійська — B2</li>
     <li>Українська — Рідна</li>
 </ul>
+</div>
+
+<script src="Scripts.js"></script>
 
 </body>
 </html>
